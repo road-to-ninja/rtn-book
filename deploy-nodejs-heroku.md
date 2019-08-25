@@ -49,7 +49,19 @@ $ heroku buildpacks:set heroku/nodejs
 The URL to your app is `https://[your-name].herokuapp.com` 
 
 
-`ToDO Environment variables`
+## Configs
 
+Most of the time you have different environnement variables values. Your Database URL is not the same for the example when you are in production or in local.
 
+To setup environnement keys:
 
+```console
+$ heroku config:set [Y_ENV_VALUES]=[value]
+example
+$ heroku config:set DB_URI= mongodb+srv://server:password@cluster.net
+```
+
+to see configs:
+```console
+$ heroku config
+```
